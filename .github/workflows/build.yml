@@ -17,3 +17,6 @@ jobs:
 
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Build
+      run: ./vendor/bin/jigsaw build prod
