@@ -1,6 +1,6 @@
 <?php
 
 return [
-    'baseUrl' => 'https://my-jigsaw-blog.com',
+    'baseUrl' => 'https://pug-rovigo.github.io/jigsaw-2020-04-15',
     'production' => true,
 ];
