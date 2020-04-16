@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         @if ($page->production)
-            // Production
         @endif
     
         <meta charset="utf-8">
