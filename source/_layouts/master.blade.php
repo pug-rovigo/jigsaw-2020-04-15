@@ -2,9 +2,7 @@
 <html lang="en">
     <head>
         @if ($page->production)
-            @php
-                $baseUrl = 'https://pug-rovigo.github.io/jigsaw-2020-04-15/';            
-            @endphp
+            // Production
         @endif
     
         <meta charset="utf-8">
@@ -19,14 +17,14 @@
 
         <title>{{ $page->title ?  $page->title . ' | ' : '' }}{{ $page->siteName }}</title>
 
-        <link rel="home" href="{{ $baseUrl . $page->baseUrl }}">
+        <link rel="home" href="{{ $page->baseUrl }}">
         <link rel="icon" href="/favicon.ico">
         <link href="/blog/feed.atom" type="application/atom+xml" rel="alternate" title="{{ $page->siteName }} Atom Feed">
 
         @stack('meta')
 
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
-        <link rel="stylesheet" href="{{ $baseUrl . mix('css/main.css', 'assets/build') }}">
+        <link rel="stylesheet" href="{{ $page->baseUrl . mix('css/main.css', 'assets/build') }}">
     </head>
 
     <body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
@@ -69,7 +67,7 @@
             </ul>
         </footer>
 
-        <script src="{{ $baseUrl . mix('js/main.js', 'assets/build') }}"></script>
+        <script src="{{ $page->baseUrl . mix('js/main.js', 'assets/build') }}"></script>
 
         @stack('scripts')
     </body>
