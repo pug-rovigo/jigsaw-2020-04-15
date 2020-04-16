@@ -18,7 +18,10 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
 
-    - name: Build
+    - name: Build NPM
+      run: npm run production
+
+    - name: Build Jigsaw
       run: ./vendor/bin/jigsaw build prod
       
     - name: Deploy
